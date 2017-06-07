@@ -13,7 +13,7 @@ Public Class Form1
             TextBox_PW.Text = My.Settings.remember_PW
             CheckBox_remember.CheckState = CheckState.Checked
         End If
-        '       System.Windows.Forms.NotifyIcon.ContextMenuStrip = ContextMenuStrip_n
+        'System.Windows.Forms.NotifyIcon.ContextMenuStrip = ContextMenuStrip_n
 
     End Sub
 
@@ -67,7 +67,7 @@ Public Class Form1
         Visible = True
     End Sub
 
-    Private Sub Menu_option_Click(sender As Object, e As EventArgs) Handles Menu_option.Click
+    Private Sub Menu_open_Click(sender As Object, e As EventArgs) Handles Menu_open.Click
         Visible = True
     End Sub
 
@@ -208,6 +208,28 @@ Public Class Form1
         e.Cancel = True
     End Sub
 
+    Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Dim kemono_count As Integer = 0
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        If kemono_count Mod 2 = 0 Then
+            kemono_count += 1
+        End If
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        If kemono_count Mod 2 = 1 Then
+            kemono_count += 1
+            If kemono_count > 5 Then
+                kemono_count = 0
+                Button_run.Text = "うごけー！"
+                Button_stop.Text = "とまれー！"
+            End If
+        End If
+    End Sub
 End Class
 
 Namespace My
