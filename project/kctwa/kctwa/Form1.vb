@@ -24,6 +24,7 @@ Public Class Form1
         NotifyIcon.Visible = True
         TextBox_ID.Enabled = False
         TextBox_PW.Enabled = False
+        Button_close.Text = "hide"
     End Sub
 
     Sub stop_click()
@@ -33,6 +34,7 @@ Public Class Form1
         NotifyIcon.Visible = False
         TextBox_ID.Enabled = True
         TextBox_PW.Enabled = True
+        Button_close.Text = "quit"
     End Sub
 
     Private Sub Button_run_Click(sender As Object, e As EventArgs) Handles Button_run.Click

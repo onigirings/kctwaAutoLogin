@@ -127,7 +127,7 @@ Partial Class Form1
         Me.Button_close.Name = "Button_close"
         Me.Button_close.Size = New System.Drawing.Size(75, 23)
         Me.Button_close.TabIndex = 1
-        Me.Button_close.Text = "close"
+        Me.Button_close.Text = "quit"
         Me.Button_close.UseVisualStyleBackColor = True
         '
         'BackGroundBrowser
